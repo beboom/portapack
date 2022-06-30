@@ -217,14 +217,6 @@ public:
 		bit_write(bits_t::ConfigSpeaker, v);
 	}
 
-	constexpr bool stealth_mode() const {
-		return bit_read(bits_t::StealthMode);
-	}
-
-	constexpr void set_stealth_mode(bool v) {
-		bit_write(bits_t::StealthMode, v);
-	}
-
 	constexpr bool config_login() const {
 		return bit_read(bits_t::ConfigLogin);
 	}
@@ -551,10 +543,6 @@ bool config_speaker() {
 	return data->ui_config.config_speaker();
 }
 
-bool stealth_mode() {
-	return data->ui_config.stealth_mode();
-}
-
 bool config_login() {
 	return data->ui_config.config_login();
 }
@@ -605,10 +593,6 @@ void set_clkout_enabled(bool v) {
 
 void set_config_speaker(bool v) {
 	data->ui_config.set_config_speaker(v);
-}
-
-void set_stealth_mode(bool v) {
-	data->ui_config.set_stealth_mode(v);
 }
 
 void set_config_login(bool v) {

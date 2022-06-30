@@ -147,12 +147,6 @@ namespace ui
 			Color::light_grey(),
 			Color::dark_grey()};
 
-		ImageButton button_stealth{
-			{19 * 8, 0, 2 * 8, 1 * 16},
-			&bitmap_icon_stealth,
-			Color::light_grey(),
-			Color::dark_grey()};
-
 		/*ImageButton button_textentry {
 		{ 170, 0, 2 * 8, 1 * 16 },
 		&bitmap_icon_unistroke,
@@ -188,7 +182,6 @@ namespace ui
 			{28 * 8, 0 * 16, 2 * 8, 1 * 16}};
 
 		void on_speaker();
-		void on_stealth();
 		void on_bias_tee();
 		// void on_textentry();
 		void on_camera();

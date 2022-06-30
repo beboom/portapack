@@ -111,8 +111,8 @@ void TransmitterModel::set_tx_gain(int32_t v_db) {
 }
 
 void TransmitterModel::on_tick_second() {
-	if (portapack::persistent_memory::stealth_mode())
-		led_tx.toggle();
+ //	if (portapack::persistent_memory::stealth_mode())
+ //		led_tx.toggle();
 }
 
 void TransmitterModel::enable() {
@@ -130,10 +130,10 @@ void TransmitterModel::enable() {
 	signal_token_tick_second = rtc_time::signal_tick_second += [this]() {
 		this->on_tick_second();
 	};
-	if (portapack::persistent_memory::stealth_mode()) {
-		DisplaySleepMessage message;
-		EventDispatcher::send_message(message);
-	}
+//	if (portapack::persistent_memory::stealth_mode()) {
+//		DisplaySleepMessage message;
+//		EventDispatcher::send_message(message);
+//	}
 }
 
 void TransmitterModel::disable() {
